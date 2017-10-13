@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Pichal</string>
     <string name="sendPictureButton">Upload picture</string>
+    <string name="auth_string">Login</string>
+    <string name="title">Picchal</string>
+    <string name="share_with_friend">Share Image</string>
+    <string name="select_user_string">Select User</string>
+    <string name="user_name">name:</string>
 </resources>

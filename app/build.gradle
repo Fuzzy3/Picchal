@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.oestbalmer.android.pichal"
         minSdkVersion 16
@@ -24,15 +24,20 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.google.firebase:firebase-core:11.4.2'
     compile 'com.google.firebase:firebase-database:11.4.2'
     compile 'com.google.firebase:firebase-firestore:11.4.2'
     compile 'com.google.firebase:firebase-storage:11.4.2'
+    compile 'com.firebaseui:firebase-ui-auth:3.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
     testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.android.support:recyclerview-v7:26.0.+'
 }
 
 apply plugin: 'com.google.gms.google-services'

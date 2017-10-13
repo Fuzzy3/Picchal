@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "136639630152",
+    "firebase_url": "https://pichal-63fbe.firebaseio.com",
+    "project_id": "pichal-63fbe",
+    "storage_bucket": "pichal-63fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136639630152:android:e5cd005a3a785128",
+        "android_client_info": {
+          "package_name": "com.oestbalmer.android.pichal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136639630152-ptlf08u3ae1p1vakqr2tbfddtkvagjv9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oestbalmer.android.pichal",
+            "certificate_hash": "3eacf6071319459a3b6f8c173314a51085953f6a"
+          }
+        },
+        {
+          "client_id": "136639630152-5iuuocf6lj62ofs6629estc4lgl3krkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUJ_mHV6VhwO3esuTMO8NXtq6zutK6_i8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136639630152-5iuuocf6lj62ofs6629estc4lgl3krkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

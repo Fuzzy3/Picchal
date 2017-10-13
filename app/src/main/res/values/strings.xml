@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pichal</string>
+    <string name="sendPictureButton">Upload picture</string>
+</resources>

@@ -1,11 +1,11 @@
 package com.oestbalmer.android.pichal;
 
 import android.app.Application;
-import android.support.design.widget.Snackbar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.oestbalmer.android.pichal.Authenticatation.AuthActivity;
 
 
 public class PicchalApp extends Application{

@@ -9,21 +9,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.oestbalmer.android.pichal.IView;
 import com.oestbalmer.android.pichal.Model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+/*
+public class UserService {
 
-public class UserService implements IUserService {
-
-    private IView mView;
+    //private IView mView;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mUsersRef;
 
 
-    public UserService(IView view) {
-        mView = view;
+    public UserService() {
+
         mDatabase = FirebaseDatabase.getInstance();
         mUsersRef = mDatabase.getReference().child("users");
     }
@@ -83,7 +82,7 @@ public class UserService implements IUserService {
         return userList;
     }
 
-    @Override
+    /*@Override
     public void createCurrentUser() {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if(firebaseUser != null) {
@@ -91,8 +90,8 @@ public class UserService implements IUserService {
             createOrUpdateUserById(user);
         }
         mView.modelUpdated();
-    }
-
+    }*/
+/*
     @Override
     public List<User> getAllUsers() {
         final List<User> listOfAllUsers = new ArrayList<>();
@@ -103,7 +102,10 @@ public class UserService implements IUserService {
                     User user = data.getValue(User.class);
                     listOfAllUsers.add(user);
                 }
+
             }
+
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -116,3 +118,4 @@ public class UserService implements IUserService {
         return listOfAllUsers;
     }
 }
+*/

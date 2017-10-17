@@ -1,11 +1,9 @@
 package com.oestbalmer.android.pichal.Services;
 
 
-import com.oestbalmer.android.pichal.IView;
+public class ImageService {
 
-public class ImageService implements IImageService {
-
-    private IView mView;
+    /*private IView mView;
 
 
     public ImageService(IView view) {
@@ -22,5 +20,5 @@ public class ImageService implements IImageService {
     @Override
     public void shareImageBetweenTwoUsers(String imageURI, String userId1, String userId2) {
 
-    }
+    }*/
 }

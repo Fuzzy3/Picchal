@@ -1,4 +1,4 @@
-package com.oestbalmer.android.pichal;
+package com.oestbalmer.android.pichal.FindFriend;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.oestbalmer.android.pichal.Model.User;
-import com.oestbalmer.android.pichal.Services.IUserService;
-import com.oestbalmer.android.pichal.Services.UserService;
+import com.oestbalmer.android.pichal.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,32 +21,35 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FindFriendActivity extends AppCompatActivity implements IView, IView.FindFriendInterface{
+public class FindFriendActivity extends AppCompatActivity implements IFindFriendActivity {
 
     @BindView(R.id.user_list_recycleview) RecyclerView mUserRecyclerView;
     private UserListAdapter mAdapter;
     private List<User> mAllUsers;
-    private IUserService mUserService;
+    private IFindFriendPresenter mFindFriendPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_friend);
-        mUserService = new UserService(this);
-        mUserService.getAllUsers();
+        mFindFriendPresenter = new FindFriendPresenter(this, new FindFriendService());
+        setupView();
+    }
+
+    private void setupView() {
         ButterKnife.bind(this);
         mAllUsers = new ArrayList<>();
-
+        mFindFriendPresenter.getAllUsers();
     }
 
     private void updateUI() {
-        mUserRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         if(mAdapter == null) {
+            mUserRecyclerView.setLayoutManager(new LinearLayoutManager(this));
             mAdapter = new UserListAdapter();
             mUserRecyclerView.setAdapter(mAdapter);
-        } else {
-            mAdapter.setAllUsersList(mAllUsers);
         }
+        mAdapter.setAllUsersList(mAllUsers);
+        mAdapter.notifyDataSetChanged();
     }
 
 
@@ -59,11 +61,13 @@ public class FindFriendActivity extends AppCompatActivity implements IView, IVie
     @Override
     public void updateListModel(List<User> userList) {
         mAllUsers = userList;
+        updateUI();
     }
 
-    @Override
-    public void modelUpdated() {
 
+    @Override
+    public void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
 
